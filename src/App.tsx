@@ -1,7 +1,13 @@
-
+import { Button } from "./Components/Button";
+import "./App.css";
 export function App() {
   return (
-    <div>Hello world</div>
+    <>
+      <Button />
+      <Button />
+      <Button />
+      <Button />
+    </>
   )
 }
 
