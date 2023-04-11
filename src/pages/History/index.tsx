@@ -1,4 +1,4 @@
-import { HistoryContainer, HistoryList, Status } from "./styles";
+import { HistoryContainer, HistoryList, Status } from './styles'
 
 export function History() {
   return (
@@ -7,7 +7,6 @@ export function History() {
 
       <HistoryList>
         <table>
-
           <thead>
             <tr>
               <th>Tarefa</th>
@@ -23,9 +22,7 @@ export function History() {
               <td>25 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status statusColor="yellow">
-                  Em andamento
-                </Status>
+                <Status statusColor="yellow">Em andamento</Status>
               </td>
             </tr>
 
@@ -34,9 +31,7 @@ export function History() {
               <td>25 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status statusColor="green">
-                  Concluído
-                </Status>
+                <Status statusColor="green">Concluído</Status>
               </td>
             </tr>
 
@@ -45,9 +40,7 @@ export function History() {
               <td>25 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status statusColor="green">
-                  Concluído
-                </Status>
+                <Status statusColor="green">Concluído</Status>
               </td>
             </tr>
 
@@ -56,9 +49,7 @@ export function History() {
               <td>25 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status statusColor="red">
-                Interrompido
-                </Status>
+                <Status statusColor="red">Interrompido</Status>
               </td>
             </tr>
 
@@ -67,9 +58,7 @@ export function History() {
               <td>25 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status statusColor="green">
-                  Concluído
-                </Status>
+                <Status statusColor="green">Concluído</Status>
               </td>
             </tr>
 
@@ -78,9 +67,7 @@ export function History() {
               <td>25 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status statusColor="green">
-                  Concluído
-                </Status>
+                <Status statusColor="green">Concluído</Status>
               </td>
             </tr>
 
@@ -89,9 +76,7 @@ export function History() {
               <td>25 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status statusColor="red">
-                Interrompido
-                </Status>
+                <Status statusColor="red">Interrompido</Status>
               </td>
             </tr>
 
@@ -100,13 +85,10 @@ export function History() {
               <td>25 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status statusColor="green">
-                  Concluído
-                </Status>
+                <Status statusColor="green">Concluído</Status>
               </td>
             </tr>
           </tbody>
-
         </table>
       </HistoryList>
     </HistoryContainer>
