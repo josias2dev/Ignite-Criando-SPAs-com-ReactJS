@@ -2,7 +2,7 @@ import { useState, useEffect, createContext, useContext } from 'react'
 import { HandPalm, Play } from 'phosphor-react'
 
 import { useForm, FormProvider } from 'react-hook-form'
-import { zodResolver } from "@hookform/resolvers/zod";
+import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
 
 import {
@@ -12,7 +12,7 @@ import {
 } from './styles'
 import { CountDown } from './components/CountDown'
 import { NewCycleForm } from './components/NewCycleForm'
-import { CyclesContext } from '../../contexts/CyclesContext';
+import { CyclesContext } from '../../contexts/CyclesContext'
 
 const newCycleFormValidationSchema = zod.object({
   task: zod.string().min(1, 'Informe a tarefa'),
@@ -25,8 +25,8 @@ const newCycleFormValidationSchema = zod.object({
 type newCycleFormProps = Zod.infer<typeof newCycleFormValidationSchema>
 
 export function Home() {
-
-  const { activeCycle, createNewCycle, interruptCurrentCycle } = useContext(CyclesContext)
+  const { activeCycle, createNewCycle, interruptCurrentCycle } =
+    useContext(CyclesContext)
 
   const newCycleForm = useForm<newCycleFormProps>({
     resolver: zodResolver(newCycleFormValidationSchema),
@@ -39,7 +39,6 @@ export function Home() {
   const { handleSubmit, reset, watch } = newCycleForm
   const task = watch('task')
   const isSubmitDisabled = !task
-
 
   function handleCreateNewCycle(data: newCycleFormProps) {
     createNewCycle(data)
@@ -55,20 +54,17 @@ export function Home() {
 
         <CountDown />
 
-        {
-          activeCycle ? (
-            <StopCountdownButton type="button" onClick={interruptCurrentCycle}>
-              <HandPalm size={24} />
-              Interromper
-            </StopCountdownButton>
-          ) : (
-            <StartCountdownButton type="submit" disabled={isSubmitDisabled}>
-              <Play size={24} />
-              Começar
-            </StartCountdownButton>
-          )
-        }
-
+        {activeCycle ? (
+          <StopCountdownButton type="button" onClick={interruptCurrentCycle}>
+            <HandPalm size={24} />
+            Interromper
+          </StopCountdownButton>
+        ) : (
+          <StartCountdownButton type="submit" disabled={isSubmitDisabled}>
+            <Play size={24} />
+            Começar
+          </StartCountdownButton>
+        )}
       </form>
     </HomeContainer>
   )
